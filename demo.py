@@ -171,10 +171,10 @@ st.sidebar.**
     with col2:
         st.sidebar.selectbox("選択",[1,2,3])
 pg = st.navigation([
-    st.Page(page1, title="Streamlitとは", icon=":クエスチョンマーク_赤:"),
-    st.Page(page2, title="基本的な機能について", icon=":複数の本:"),
-    st.Page(page3, title="最新機能について(1)", icon=":ロボット:"),
-    st.Page(page4, title="最新機能について(2)", icon=":ロボット:"),
-    st.Page(page5, title="最新機能について(3)", icon=":ロボット:"),
+    st.Page(page1, title="Streamlitとは", icon="❓"),
+    st.Page(page2, title="基本的な機能について", icon="📚"),
+    st.Page(page3, title="最新機能について(1)", icon="🤖"),
+    st.Page(page4, title="最新機能について(2)", icon="🤖"),
+    st.Page(page5, title="最新機能について(3)", icon="🤖"),
 ])
 pg.run()
