@@ -36,14 +36,35 @@ def page2():
 import streamlit as st
 import pandas as pd
 st.write("Hello *world!*") # 文字表示
+                
 df = pd.read_csv("data.csv")
 st.dataframe(df)             # データフレーム表示
+                
+
+
 number = st.slider("好きな数字は？", 0, 100)  # スライダ選択
 st.write(number) # 文字表示
+                
+
+
+
 uploaded_file = st.file_uploader("ファイルを選択してください") #ローカルファイル読み込み
+                
+
+
+
+
+
+
 color = st.color_picker("好きな色を選択してください", "#00F900") # カラーパレット
+                
+
 select_sports = st.radio("好きなスポーツは？",["野球", "サッカー", "テニス"]) # ラジオボタン
 st.write(select_sports) # 文字表示
+                
+
+
+                
 st.bar_chart(df,x="商品名",y="単価") # データ可視化
 ''',language="python")
     with col2:
