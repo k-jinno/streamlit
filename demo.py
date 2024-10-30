@@ -11,17 +11,16 @@ def page1():
     st.write("StreamlitはPythonで簡単にWebアプリケーションを作成できるオープンソースのライブラリです。")
     st.write("Streamlitを使うことで、データの可視化や機械学習モデルのデバッグ、プロトタイプの作成など、様々な用途でWebアプリケーションを作成することができます。")
 
-    st.write('''使い方は、streamlitのインストール後、デモ用のpythonプログラムファイルを作成し、ターミナル上でコマンドを叩くことで、ブラウザ上でWebアプリが起動されます。''')
+    st.write('''使い方は以下の通りで、streamlitのインストール後、デモ用のpythonプログラムファイルを作成し、ターミナル上でコマンドを叩くことで、ブラウザ上でWebアプリが起動されます。''')
     st.code('''
 $ pip install streamlit
 ~streamlit用プログラム作成~
 $ streamlit run demo.py
             ''')
-    st.write("現在Python3.8~3.12までサポートされており、")
+
     st.link_button("Streamlit公式サイト", "https://streamlit.io/")
-    st.write("その手軽さや便利さから、社内やグループ会社内でも業務で活用されています。")
-    st.link_button("過去malee勉強会記事1", "https://malee.qiita.com/shimamura_at/items/0aff71593b0496d0cef4")
-    st.link_button("過去malee勉強会記事2", "https://teams-share.qiita.com/shared_articles/6e8b63cc8dc0d0db1443e8cb6eee0b3f")
+    st.write("現在Python3.8~3.12までサポートされており、その手軽さや便利さから、社内やグループ会社内でも業務で活用されています。")
+
     st.link_button("docomoでの社内利用例", "https://it.impress.co.jp/articles/-/25986")
     st.write("10/30時点ではver1.39.0まで利用可能となっており、今回ver1.39.0で利用できる機能の中で応用的な機能を中心に紹介します。")
 def page2():
