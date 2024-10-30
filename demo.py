@@ -10,6 +10,14 @@ def page1():
     st.title("Streamlitとは")
     st.write("StreamlitはPythonで簡単にWebアプリケーションを作成できるオープンソースのライブラリです。")
     st.write("Streamlitを使うことで、データの可視化や機械学習モデルのデバッグ、プロトタイプの作成など、様々な用途でWebアプリケーションを作成することができます。")
+
+    st.write('''使い方は、streamlitのインストール後、デモ用のpythonプログラムファイルを作成し、ターミナル上でコマンドを叩くことで、ブラウザ上でWebアプリが起動されます。''')
+    st.code('''
+$ pip install streamlit
+~streamlit用プログラム作成~
+$ streamlit run demo.py
+            ''')
+    st.write("現在Python3.8~3.12までサポートされており、")
     st.link_button("Streamlit公式サイト", "https://streamlit.io/")
     st.write("その手軽さや便利さから、社内やグループ会社内でも業務で活用されています。")
     st.link_button("過去malee勉強会記事1", "https://malee.qiita.com/shimamura_at/items/0aff71593b0496d0cef4")
