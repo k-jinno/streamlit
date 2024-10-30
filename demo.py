@@ -30,6 +30,7 @@ $ streamlit run demo.py
 ・Streamlit Community Cloud はビジネス利用する際には適宜申請をする必要があること""")
 def page2():
     st.title("基本的な機能について")
+    st.write("その他基本的な機能については、公式が提供している「30days of streamlit」(https://30days.streamlit.app/) などで学習可能")
     col1,col2 = st.columns(2)
     with col1:
         st.info("記載コード例")
