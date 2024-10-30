@@ -32,6 +32,7 @@ def page2():
     st.title("基本的な機能について")
     col1,col2 = st.columns(2)
     with col1:
+        st.info("記載コード例")
         st.code('''
 import streamlit as st
 import pandas as pd
@@ -64,10 +65,11 @@ st.write(select_sports) # 文字表示
                 
 
 
-                
+
 st.bar_chart(df,x="商品名",y="単価") # データ可視化
 ''',language="python")
     with col2:
+        st.info("表示例")
         st.write("Hello *world!*")
         df = pd.read_csv("data.csv")
         st.dataframe(df)
@@ -80,6 +82,7 @@ st.bar_chart(df,x="商品名",y="単価") # データ可視化
         st.bar_chart(df,x="商品名",y="単価")
 def page3():
     st.title("最新機能について(1)")
+    st.info("記載コード例")
     st.write("StreamlitはLLM利用時のデモアプリとしてもよく活用されます。")
     st.write("LLM関連のStreamlit機能として、以下の機能が存在しています。")
     st.write("他のLLMアプリ例は以下で紹介されています。")
@@ -110,6 +113,7 @@ st.spinner()
 st.write_stream()
 ''',language="python")
     with col2:
+        st.info("表示例")
             # st.write("Streamlitについて紹介してください")
         if prpmpt := st.chat_input():
             with st.chat_message('human'):
@@ -123,6 +127,7 @@ def page4():
     st.write("Streamlitはデータの可視化の面でも便利な機能があります")
     col1,col2 = st.columns(2)
     with col1:
+        st.info("記載コード例")
         st.code('''
 import streamlit as st
 # 編集可能なデータフレームの提供
@@ -131,6 +136,7 @@ st.data_editor()
 st.plotly_chart()
                 ''')
     with col2:
+        st.info("表示例")
         df = pd.read_csv("data.csv")
         edit_df = st.data_editor(df)
         st.write("編集後データの可視化")
