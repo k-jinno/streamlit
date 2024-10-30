@@ -168,20 +168,90 @@ st.plotly_chart()
 def page5():
     st.title("最新機能について(3)")
     st.write("Streamlitにおけるレイアウト機能についても様々な機能があります")
-    col1,col2 = st.columns(2)
-    with col1:
-        st.code('''
+
+    st.code('''
 import streamlit as st
 # サイドバー上にオブジェクトを配置
 st.sidebar.**
-                ''')
-    with col2:
-        st.sidebar.selectbox("選択",[1,2,3])
+例）st.sidebar.selectbox("選択",[1,2,3])
+
+# 1アプリ内での複数ページ化
+def page1():
+    st.title("Streamlitとは")
 pg = st.navigation([
     st.Page(page1, title="Streamlitとは", icon="❓"),
     st.Page(page2, title="基本的な機能について", icon="📚"),
     st.Page(page3, title="最新機能について(1)", icon="🤖"),
     st.Page(page4, title="最新機能について(2)", icon="🤖"),
     st.Page(page5, title="最新機能について(3)", icon="🤖"),
+    st.Page(page6, title="まとめ", icon="❕"),
+])
+pg.run()
+        
+# 複数列でのオブジェクト配置
+col1,col2 = st.columns(2)
+with col1:
+    st.**
+with col2:
+    st.**
+            
+# 展開/折りたたみ化
+with st.expander("詳細"):
+
+# フォームの作成
+with st.form("my_form"):
+    st.write("Inside the form")
+    slider_val = st.slider("Form slider")
+
+    # フォームボタンの設置（必須）
+    submitted = st.form_submit_button("Submit")
+    if submitted:
+        st.write(slider_val)
+
+# タブの作成
+tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
+with tab1:
+    st.header("A cat")
+    
+                ''')
+    st.sidebar.selectbox("選択",[1,2,3])
+
+    with st.expander("詳細"):
+        st.write("詳細です")
+    
+    with st.form("my_form"):
+        st.write("Inside the form")
+        slider_val = st.slider("Form slider")
+
+        # Every form must have a submit button.
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            st.write(slider_val)
+    
+    tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
+    with tab1:
+        st.header("A cat")
+    with tab2:
+        st.header("A dog")
+    with tab3:
+        st.header("An owl")
+
+def page6():
+    st.title("まとめ")
+    st.write("ここまで、Streamlitの最新機能を紹介してきましたが、紹介できたものは一部のみです。")
+    st.write("公式の機能以外にもサードパーティ製のライブラリ(https://streamlit.io/components) などもあります。")
+    st.write("公式ページからサンプルのアプリやコミュニティ投稿のアプリの紹介がされているので、併せて確認してみてください。")
+
+    st.write("こういった機能は実現できるのかなどの質問や、実際にこういった使い方をしているなどを共有いただければと思います。")
+    if st.button("ご清聴ありがとうございました!!"):
+        st.balloons()
+
+pg = st.navigation([
+    st.Page(page1, title="Streamlitとは", icon="❓"),
+    st.Page(page2, title="基本的な機能について", icon="📚"),
+    st.Page(page3, title="最新機能について(1)", icon="🤖"),
+    st.Page(page4, title="最新機能について(2)", icon="🤖"),
+    st.Page(page5, title="最新機能について(3)", icon="🤖"),
+    st.Page(page6, title="まとめ", icon="❕"),
 ])
 pg.run()
