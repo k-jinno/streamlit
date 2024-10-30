@@ -23,6 +23,11 @@ $ streamlit run demo.py
 
     st.link_button("docomoでの社内利用例", "https://it.impress.co.jp/articles/-/25986")
     st.write("10/30時点ではver1.39.0まで利用可能となっており、今回ver1.39.0で利用できる機能の中で応用的な機能を中心に紹介します。")
+
+    st.warning("""今回はStreamlit Cloudというstreamlitアプリが一般公開できるサイトで共有しています。
+               そのため、以下の2点ご注意ください。\n
+・社外秘データをアップロードしないこと\n
+・Streamlit Community Cloud はビジネス利用する際には適宜申請をする必要があること""")
 def page2():
     st.title("基本的な機能について")
     col1,col2 = st.columns(2)
