@@ -83,7 +83,7 @@ st.bar_chart(df,x="商品名",y="単価") # データ可視化
         st.bar_chart(df,x="商品名",y="単価")
 def page3():
     st.title("最新機能について(1)")
-    st.info("記載コード例")
+    
     st.write("StreamlitはLLM利用時のデモアプリとしてもよく活用されます。")
     st.write("LLM関連のStreamlit機能として、以下の機能が存在しています。")
     st.write("他のLLMアプリ例は以下で紹介されています。")
@@ -101,6 +101,7 @@ def page3():
             time.sleep(0.02)
     col1,col2 = st.columns(2)
     with col1:
+        st.info("記載コード例")
         st.code('''
 import streamlit as st
  # LLM利用時のプロンプト入力フォーマット
